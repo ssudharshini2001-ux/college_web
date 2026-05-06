@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Prevents padding from breaking width */
+}
+
+nav {
+    background-color: #223A21;
+    color: white;
+    padding: 20px 40px; /* Vertical and Horizontal padding */
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+
+.nav-container {
+    display: flex;          /* The magic line that makes it a straight row */
+    flex-direction: row;    /* Forces horizontal layout */
+    align-items: center;    /* Keeps everything centered vertically */
+    justify-content: flex-start; /* Aligns items to the left */
+    gap: 30px;              /* Standard gap between all items */
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;               /* Space between the icon and text */
+    white-space: nowrap;    /* Keeps phone number on one line */
+    font-size: 14px;
+}
+
+/* Optional: If you want the News icon to be yellow like your earlier screenshot */
+.news-item {
+    color:white; 
+}
+.marquee-container {
+    background-color: #1a301a; /* Dark green background */
+    color: #EAB308;           /* Golden yellow text */
+    overflow: hidden;         /* Hides the text that goes off-screen */
+    white-space: nowrap;      /* Keeps everything on one line */
+    padding: 15px 0;
+    font-family: sans-serif;
+    
+}
+
+.marquee-content {
+    display: inline-block;
+    padding-left: 100%;       /* Initial starting position */
+    animation: marquee 15s linear infinite;
+}
+
+.marquee-content span {
+    margin-right: 50px;       /* Space between repeating sentences */
+}
+
+/* The Animation */
+@keyframes marquee {
+    0% { transform: translate(0, 0); }
+    60% { transform: translate(-60%, 0); }
+}
+.social-links {
+    display: flex;       /* Put them in a straight line */
+    gap: 25px;           /* Space between icons */
+    background-color: #223A21; /* Match your green bar */
+    padding: 15px;
+}
+
+.social-links i {
+    color: white;        /* Makes icons white */
+    font-size: 20px;     /* Adjust size as needed */
+    cursor: pointer;
+}
+
+.social-links i:hover {
+    color: #EAB308;     /* Optional: turns yellow when you touch it */
+}

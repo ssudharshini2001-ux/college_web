@@ -52,7 +52,7 @@ body {
 
 .marquee-content {
     display: inline-block;
-    animation: marquee 20s linear infinite;
+    animation: marquee 10s linear infinite;
     color: #EAB308;
 }
 
@@ -253,3 +253,498 @@ body {
     width: 100px;
 
 }
+.welcome-marquee-small {
+    width: 100%;
+    overflow: hidden;
+    background-color: #ffffff; /* White background as per screenshot */
+    padding: 8px 0;            /* Thin vertical bar */
+    white-space: nowrap;
+}
+
+.marquee-content-mini {
+    display: inline-block;
+    animation: scroll-mini 7s linear infinite; /* Unique animation name */
+}
+
+.marquee-content-mini span {
+    font-size: 40px;           /* Small font size */
+    font-weight: 900;
+    font-family: 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    
+    /* IMAGE-IN-TEXT EFFECT */
+    background-image: url('images/clgimg.png'); 
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;        /* Hide actual text color to show image */
+    
+    /* THIN OUTLINE for visibility */
+    -webkit-text-stroke: 0.5px #666; 
+    
+    padding-right: 80px;       /* Space between the repeated text */
+}
+
+/* UNIQUE KEYFRAMES for this marquee */
+@keyframes scroll-mini {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+ 
+  .admission-tag {
+    color: #2D4A22;         /* Dark green */
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .course-title {
+    color: #101828;
+    transition: color 0.3s ease; /* Makes the color change smooth */         /* Dark navy/black */
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0;
+    cursor: pointer;
+}
+.course-title:hover {
+    color: #D4AF37; /* The color it turns when touched (Gold) */
+  }
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Keeps everything on the center line */
+    text-align: center;
+    gap: 20px;              /* Spacing between the three main blocks */
+  }
+  
+  .badge-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px; 
+     margin-right: 60%;    /* Extra breathing room for the badge */
+  }
+   
+   .badge-image {
+    max-width: 150px;       /* Adjust size of the '8' badge as needed */
+    height: auto;
+  }
+  
+  .sub-text {
+    color: #C0392B;         /* Matches the reddish-pink in your image */
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: -10px;      /* Pulls the text closer to the ribbon */
+  }
+   /* This is the main section holding everything */
+.about-section {
+    width: 100%;
+    display: flex;
+    /* This pushes the navy box to the far right */
+    justify-content: flex-end; 
+    background-color: #ffffff; /* White background for the left side */
+    padding: 50px 0;
+  }
+  
+  /* This is the dark navy box itself */
+  .info-column-right {
+    background-color: #0B0E23; /* Dark navy */
+    width: 50%;                /* Occupies the right 65% of the screen */
+    display: flex;
+    padding: 40px 40px;
+    gap: 40px;
+    color: white;
+    /* Optional: gives it that "cut off" look on the right edge */
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    margin-right:10%;
+    margin-top:-400px;
+    margin-bottom: 100px;
+  }
+  
+  .card {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #D4AF37; /* Gold arrows */
+  }
+  
+  hr {
+    border: 0;
+    border-top: 5px solid rgba(255, 255, 255, 0.2);
+    margin: 30px 0;
+    
+  }
+  .card p {
+    margin-bottom: 25px;   /* Creates space below the text */
+    line-height: 1.6;      /* This also makes the text easier to read */
+    color: #FFFFFF;
+  }
+  .video-section {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 500px; /* Fixed height to enable sidebar scrolling */
+    background: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-top: -150px;
+  }
+  
+  /* Sidebar Styling */
+  .playlist-sidebar {
+    flex: 0 0 300px; /* Sidebar width */
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+  }
+  
+  .playlist-header {
+    background-color: #1a5d2c; /* The green color in your screenshot */
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .video-list {
+    overflow-y: auto; /* Makes the playlist scrollable */
+    flex-grow: 1;
+  }
+  
+  .video-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    transition: background 0.3s;
+  }
+  
+  .video-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .video-item.active {
+    background-color: #fff8e1; /* Pale yellow from your screenshot */
+  }
+  
+  .video-item img {
+    width: 80px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .video-item p {
+    font-size: 14px;
+    margin: 0;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  /* Video Player Styling */
+  .main-video-container {
+    flex-grow: 1;
+    background-color: #000;
+  }
+  
+  .main-video-container iframe {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .video-section {
+      flex-direction: column;
+      height: auto;
+    }
+    .playlist-sidebar {
+      flex: none;
+      width: 100%;
+      height: 300px;
+    }
+  }
+  .palar-tag {
+    color: #2D4A22;         /* Dark green */
+    font-size: 1rem;
+    font-weight: bold;
+  }
+.course-title{ font-family: 'Montserrat', sans-serif;
+    font-weight: 500;             /* Extra Bold */
+    font-size: 2.5rem;
+    color: #101828;              /* Dark Navy Blue */
+    text-transform: uppercase;   /* Forces all caps */
+    letter-spacing: -0.02em;     /* Tightens the letters slightly */
+    font-stretch: expanded;      /* Makes the letters feel wider */
+  }
+   .sub-text{
+        font-family: 'Arial', sans-serif;
+        font-size: 1rem;
+        color: #475467;        /* Muted grey for body text */
+        line-height: 1.7;      /* Adds breathing room between lines */
+        max-width: 950px;      /* Keeps the text easy to read */
+      
+   }
+
+   .features-section {
+    width: 100%;
+    padding: 50px 0;
+    background-color: #fff;
+  }
+  
+  .features-container {
+    display: flex;
+    justify-content: center; /* Centers the whole row */
+    align-items: flex-start; 
+    max-width: 1400px;      /* Large enough for 4 cards */
+    margin: 0 auto;
+    gap: 15px;               /* Spacing between the cards */
+    font-family: 'Outfit', sans-serif;
+  }
+  
+  .feature-card {
+    flex: 1;                 /* Forces cards to share space equally */
+    min-width: 250px;        /* Minimum width before it gets squished */
+    max-width: 300px;        /* Prevents cards from getting too huge */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .image-box {
+    width: 100%;
+    height: 200px;           /* Slightly shorter height to keep it on one line */
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .info-circle {
+    background: white;
+    color: #475467;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 240px;            /* Slightly smaller circle to fit 4 across */
+    height: 240px;
+    border-radius: 50%;
+    margin-top: -50px;      /* Exactly half of height for perfect overlap */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 10;
+  }
+   
+  .feature-card:hover .info-circle {
+    transform: translateY(-10px) scale(1.02); /* Moves up and grows slightly */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);  /* Deepens the shadow */
+    background-color: #1a3020; /* Dark green from your image */
+  color: white;
+  }
+  /* Ensure the icon also changes color */
+.feature-card:hover .icon {
+    filter: brightness(0) invert(1); /* Turns dark icons white */
+  }
+  .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  .feature-card:hover .arrow {
+    transform: translate(5px, -5px); /* Moves the arrow up and to the right */
+  }
+
+  .message-section {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.message-card {
+    background-color: #F1F3F2;
+    padding: 40px;
+    flex: 1;
+    min-width: 350px;
+    max-width: 550px;
+    position: relative;
+    border-radius: 8px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    
+}
+
+.card-header h2 {
+    color: #121632;;
+    font-family: 'Outfit', 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin: 0;
+    letter-spacing: -0.02em; /* Tighten slightly to match the screenshot */
+    line-height: 1.1;
+     
+}
+
+/* Creating the organic blob shape */
+.image-blob {
+    width: 200px;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    /* This creates the irregular circle look */
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Replace URLs with your actual image paths */
+.chairman-img {
+    background-image: url('images/ chairman.jpg'); 
+    border-radius: 65% 35% 39% 61% / 44% 63% 37% 56%;
+}
+
+.principal-img {
+    background-image: url('images/ principal.jpg');
+    border-radius: 30% 70% 70% 30% / 46% 25% 75% 54%;
+}
+
+.card-content p {
+    color: var(--text-gray);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.learn-more {
+    display: inline-block;
+    background-color: #2d5a31;;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: -20px;
+    transition: background 0.3s ease;
+    float: right; /* Aligns button to the bottom right */
+}
+
+.learn-more:hover {
+    background-color:#ffb85f;
+    color: black;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .card-header {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .card-header h2 {
+        text-align: center;
+        margin-top: 20px;}
+    }
+
+    :root {
+        --dark-green: #1b3a1e;
+         --orange-accent:#ffb366;  /* The color from your screenshot*/
+        --navy: #121632;
+      }
+      .info-overlay-card {
+        display: flex;
+        background-color: var(--dark-green);
+        color: white;
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        font-family: 'Outfit', sans-serif;
+      }
+       .info-column {
+  flex: 1;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* The first column adjustment */
+.info-column.highlight {
+  background-color: var(--orange-accent);
+  color: var(--navy); /* Dark text for the light background */
+}
+
+/* Icon Colors */
+.icon-dark {
+  font-size: 3rem;
+  color: var(--navy);
+  margin-bottom: 25px;
+}
+
+.icon-gold {
+  font-size: 3rem;
+  color: var(--orange-accent);
+  margin-bottom: 25px;
+}
+
+/* Text Styles */
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+/* Links */
+.read-more, .read-more-dark {
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.read-more { color: white; }
+.read-more-dark { color: var(--navy); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .info-overlay-card {
+    flex-direction: column;
+  }
+  .info-column {
+    padding: 40px 20px;
+  }
+}
+      
+       
